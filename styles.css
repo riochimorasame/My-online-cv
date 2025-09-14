@@ -112,8 +112,7 @@ h2 {
     padding: 15px;
 }
 
-
-/* Experience Section (Timeline) */
+/* Experience Section & Formation (Timeline) */
 .timeline {
     position: relative;
     border-left: 2px solid #ccc;
@@ -150,26 +149,8 @@ h2 {
     color: #0056b3;
 }
 
-/* Formation Section */
-.education-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.education-list li {
-    background-color: #f8f9fa;
-    margin-bottom: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #007bff;
-    display: flex;
-    align-items: flex-start;
-}
-
-.education-list strong {
-    font-size: 1.1em;
-    color: #0056b3;
-}
+/* Formation Section (re-styled as timeline) */
+/* Les styles de la timeline s'appliquent déjà à cette section grâce à la classe .timeline */
 
 /* Centres d'Intérêt Section */
 .interets-list {
@@ -190,54 +171,8 @@ h2 {
     align-items: center;
 }
 
-/* Boutons */
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.download-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Formulaire de contact */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-}
-
 /* Styles pour les icônes */
 .competence-list li i,
-.education-list li i,
 .interets-list li i {
     margin-right: 10px;
     color: #007bff;
@@ -248,24 +183,6 @@ h2 {
     margin-right: 5px;
     color: #777;
 }
-
-/* --- Animations --- */
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.animated-title {
-    animation: slideInUp 1s ease-out forwards;
-}
-
 
 /* --- Media Query pour l'adaptation aux téléphones --- */
 @media (max-width: 768px) {
@@ -289,7 +206,11 @@ h2 {
         font-size: 1.5em;
     }
     
-    .contact-grid, .competence-list {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competence-list {
         grid-template-columns: 1fr;
     }
 
@@ -304,4 +225,60 @@ h2 {
     .education-list li {
         padding: 15px;
     }
+
+    .education-list li p {
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+}
+
+/* --- Styles pour les animations --- */
+
+/* OPTION 1: Animation de glissement et d'apparition */
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animated-title {
+    animation: slideInUp 1s ease-out forwards;
+}
+
+/* OPTION 2 : Animation de frappe (effet machine à écrire) */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .1em;
+    width: 0;
+    animation: 
+        typing 3s steps(30, end) forwards,
+        blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* OPTION 3 : Texte flottant et ondulant */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+}
+.float-title span {
+    display: inline-block;
+    animation: float 5s ease-in-out infinite;
 }
