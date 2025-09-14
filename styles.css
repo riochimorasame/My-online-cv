@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #004d80;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-left: 5px solid #004d80;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #004d80;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e9e9e9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.job, .education {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+}
+
+.job h3, .education h3 {
+    margin: 0 0 5px 0;
+    color: #005f99;
+}
+
+.period {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.skill-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    background-color: #eef7ff;
+    border-left: 3px solid #0056b3;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+
+.skill-description p {
+    margin: 15px 0;
+}
+
+.skill-description.active {
+    max-height: 200px;
+    padding: 15px;
+}
+
+.competence-list li {
+    cursor: pointer;
+}
+
+.competence-list li,
+.education-list li,
+.interets-list li {
+    display: flex;
+    align-items: center;
+}
+
+.competence-list li i,
+.education-list li i,
+.interets-list li i {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.timeline-date i {
+    margin-right: 5px;
+    color: #777;
+}
