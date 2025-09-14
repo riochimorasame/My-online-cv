@@ -12,8 +12,12 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>MONTCHO Komlan Enoch Mawuena</h1>
+            <h1 class="animated-title">MONTCHO Komlan Enoch Mawuena</h1>
             <p>Jeune passionné par les domaines de l'électricité et des environnements connectés</p>
+            <div class="download-buttons">
+                <a href="./Cv - MONTCHO Komlan Enoch.pdf" download="CV-MONTCHO-Komlan-Enoch.pdf" class="btn"><i class="fas fa-download"></i> Télécharger le CV (PDF)</a>
+                <a href="./Cv - MONTCHO Komlan Enoch.docx" download="CV-MONTCHO-Komlan-Enoch.docx" class="btn"><i class="fas fa-download"></i> Télécharger le CV (DOCX)</a>
+            </div>
         </div>
     </header>
 
@@ -97,7 +101,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date"><i class="far fa-calendar-alt"></i> 14/08/2023 - 01/09/2023</div>
                     <div class="timeline-content">
-                        <h3>Stage - ROK</h3>
+                        <h3>Stage - ROK</div>
                         <p>Groupe togolais actif dans les domaines du développement et du Bâtiment et Travaux Publics (BTP), notamment dans la construction et la plomberie.</p>
                     </div>
                 </div>
@@ -136,6 +140,26 @@
                 <li><i class="fas fa-running"></i> Sport</li>
             </ul>
         </section>
+
+        <section id="contact-form" class="card">
+            <h2><i class="fas fa-paper-plane icon-header"></i> Me Contacter</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn"><i class="fas fa-envelope"></i> Envoyer le message</button>
+            </form>
+        </section>
+        
     </main>
     <script src="script.js"></script>
 </body>
